@@ -1,0 +1,127 @@
+<script> 
+    function lw() {
+    var command = document.getElementById("in1").value
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.249.97/cgi-bin/kube.py?command=" +command , true)
+    xhr.send()
+    xhr.onload = function() {
+    var out = xhr.responseText;
+    document.getElementById("out").innerHTML = out;
+
+}
+
+}
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUBERNETES CONSOLE</title>
+</head>
+<style>
+    body{
+    background-image: url("https://learnk8s.io/a/a00824c07c47eacaa1f1d9a988720986.svg");
+    height: 100%;
+    background-size: cover;
+    }
+
+    .mybox{
+    background-color: rgb(212, 146, 102);
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:600px; 
+    border: 5px solid black;
+    }
+    .text {
+            font-size: 30px;
+            color: rgb(72, 209, 152);
+            top: 0px;
+
+        }
+.header{
+    color: 800000;
+    }
+
+.button{
+    padding: 30px;
+    margin:30px;
+    border: 0;
+    background: rgb(218, 3, 3);
+    color: white;
+
+    cursor: pointer;
+    position: absolute;
+    top: 245px;
+    right: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+    border-radius: 40%;
+    box-shadow: 0 9px rgb(3, 3, 3);
+    background-color: rgb(147, 245, 19);
+            font-size: 20px;
+            text-align: center;
+            top: 30px;
+
+
+}
+.button:active {
+            background-color: #0da3df;
+            box-shadow: 0 4px #666;
+            transform: translateY(4px);
+        }
+
+input{
+    background-color: rgb(247, 247, 238);
+    font-size: 40px;
+    }
+.a5 {
+            text-align: center;
+            transform: scale(1,1);
+
+    }
+    .a3 {
+            background-color: rgb(11, 248, 228);
+            font-size: 100px;
+            text-align: center;
+            left: 200px;
+        }
+
+    #a1{
+            color:rgba(0, 0, 0, 0.8)(127, 212, 71);
+            background-color: rgb(100, 193, 247);
+            border: rgb(22, 15, 16);
+            border: medium dashed rgb(229, 153, 231);
+            font-size: 20px;
+            top: 200px;
+
+            transform: scale(0.75,0.75);
+            position: relative;
+            bottom: 50px;
+
+
+        }
+
+
+</style>
+<body>
+<div style="text-align: center;" class="header">
+    <h2><b> WELCOME TO K8S WEBSITE</b></h2>
+
+<div class="a3"><i><b> [root @localhost~]# <input id="in1" /></b></i></div>
+    <button class="button" onclick="lw()">
+        <b>GO</b>
+    </button>
+
+    </br>
+
+    <pre>
+
+<div class="mybox" id="out"><div />
+<div class="a5"><img src="https://www.educative.io/v2api/editorpage/4679616276987904/image/4833294770241536"
+            alt="broken image"></div>
+<pre/> 
+</div>
+</body>
+</html>
