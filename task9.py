@@ -12,8 +12,8 @@ import time
 
 dataset = cgi.FieldStorage()
 
-cmd = data.getvalue("command")
+command = data.getvalue("command")
 
-output = subprocess.getoutput("sudo " +cmd+ " --kubeconfig /root/kubews/admin.conf") 
+output = subprocess.getoutput("sudo " +command+ " --kubeconfig /root/kubews/admin.conf") 
 
 print(output)
