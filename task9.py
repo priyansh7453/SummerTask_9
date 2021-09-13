@@ -1,4 +1,3 @@
-  
 #!/usr/bin/python3
 
 print("content-type: text/html")
@@ -10,10 +9,10 @@ import time
 
 
 
-dataset = cgi.FieldStorage()
+data = cgi.FieldStorage()
 
-command = data.getvalue("command ")
+cmd = data.getvalue("command")
 
-output = subprocess.getoutput("sudo " + command + " --kubeconfig /root/kubews/admin.conf") 
+out = subprocess.getoutput("sudo " +cmd+ " --kubeconfig /root/kubews/admin.conf") 
 
-print(output)
+print(out)
