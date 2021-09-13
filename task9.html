@@ -1,15 +1,15 @@
 <script> 
     function lw() {
     var command = document.getElementById("in1").value
-    var xhtml = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.249.97/cgi-bin/kube.py?command=" +command , true)
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.43.233/cgi-bin/kube.py?command=" +command , true)
     xhr.send()
     xhr.onload = function() {
-    var out = xhtml.responseText;
+    var out = xhr.responseText;
     document.getElementById("out").innerHTML = out;
-
+    
 }
-
+    
 }
     </script>
 <!DOCTYPE html>
@@ -18,39 +18,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUBERNETES CONSOLE</title>
+    <title>KUBERNETES COMMAND</title>
 </head>
 <style>
     body{
-    background-image: url("https://learnk8s.io/a/a00824c07c47eacaa1f1d9a988720986.svg");
+    background-image: url("https://www.opcito.com/hubfs/Orchestrating-with-Kubernetes-in-Azure-Container-Service.gif");
     height: 100%;
     background-size: cover;
     }
 
     .mybox{
-    background-color: rgb(212, 146, 102);
+    background-color: rgb(203, 102, 212);
     background-repeat: no-repeat;
-    width: 1000px;
+    width: 1200px;
     height:600px; 
     border: 5px solid black;
     }
     .text {
             font-size: 30px;
-            color: rgb(72, 209, 152);
+            color: rgb(14, 14, 19);
             top: 0px;
 
         }
 .header{
     color: 800000;
     }
-
+        
 .button{
     padding: 30px;
     margin:30px;
     border: 0;
     background: rgb(218, 3, 3);
     color: white;
-
+    
     cursor: pointer;
     position: absolute;
     top: 245px;
@@ -63,31 +63,31 @@
             font-size: 20px;
             text-align: center;
             top: 30px;
-
-
+    
+    
 }
 .button:active {
             background-color: #0da3df;
             box-shadow: 0 4px #666;
             transform: translateY(4px);
         }
-
+    
 input{
     background-color: rgb(247, 247, 238);
     font-size: 40px;
     }
-.a11 {
+.a5 {
             text-align: center;
             transform: scale(1,1);
-
+            
     }
     .a3 {
-            background-color: rgb(11, 248, 228);
-            font-size: 100px;
+            background-color: rgb(248, 47, 11);
+            font-size: 40px;
             text-align: center;
             left: 200px;
         }
-
+    
     #a1{
             color:rgba(0, 0, 0, 0.8)(127, 212, 71);
             background-color: rgb(100, 193, 247);
@@ -99,29 +99,36 @@ input{
             transform: scale(0.75,0.75);
             position: relative;
             bottom: 50px;
-
-
+    
+    
         }
 
 
 </style>
 <body>
 <div style="text-align: center;" class="header">
-    <h2><b> WELCOME TO K8S WEBSITE</b></h2>
-
+    <h2><i> WELCOME TO THIS WEBSITE</i></h2>
+    
 <div class="a3"><i><b> [root @localhost~]# <input id="in1" /></b></i></div>
     <button class="button" onclick="lw()">
-        <b>GO</b>
+        <b>RUN</b>
     </button>
 
     </br>
-
+    
     <pre>
-
-<div class="mybox" id="out"><div />
-<div class="a11"><img src="https://www.educative.io/v2api/editorpage/4679616276987904/image/4833294770241536"
+        
+<div style="text-align: center;" class="mybox" id="out">Press <b>RUN</b> to see your output here.<div />
+<div class="a5"><img src="https://ph-files.imgix.net/01ff7929-03e9-45c3-8398-1ff1ae6abead?auto=format"
             alt="broken image"></div>
 <pre/> 
+
+
+    
 </div>
+
+
+
 </body>
+
 </html>
