@@ -2,7 +2,7 @@
     function lw() {
     var command = document.getElementById("in1").value
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.43.233/cgi-bin/kube.py?command=" +command , true)
+    xhr.open("GET", "http://192.168.196.97/cgi-bin/task9.py?command=" +command , true)
     xhr.send()
     xhr.onload = function() {
     var out = xhr.responseText;
@@ -18,11 +18,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUBERNETES COMMAND</title>
+    <title>Kubernetes command</title>
 </head>
 <style>
     body{
-    background-image: url("https://www.opcito.com/hubfs/Orchestrating-with-Kubernetes-in-Azure-Container-Service.gif");
+    background-color: white;
     height: 100%;
     background-size: cover;
     }
